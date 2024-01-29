@@ -1,0 +1,351 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    background-color: #000;
+    height: 100vh;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.conhecimento {
+    text-align: center; /* Centraliza horizontalmente */
+}
+
+.conhecimento img {
+    width: 300px;
+    height: auto;
+    margin: auto; /* Centraliza verticalmente */
+}
+
+.interface {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+}
+
+h1 {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 600;
+}
+h1 span {
+    color: yellow;
+    position: relative;
+}
+h1 span::before {
+    content: "";
+    height: 30px;
+    width: 2px;
+    position: absolute;
+    top: 50%;
+    right: -8px;
+    background: yellow;
+    transform: translateY(-45%);
+    animation: blink 0.7s infinite;
+    
+}
+h1 span.stop-blinking::before {
+    animation: none;
+}
+@keyframes blink {
+    50% { opacity: 0 }
+}
+
+.btn-contato button {
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: yellow;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .2s;
+    box-shadow: 0px 0px 8px yellow;
+    transform: scale(1.05);
+}
+
+h2.titulo {
+    color: #fff;
+    font-size: 38px;
+    text-align: center;
+}
+
+h2.titulo span {
+    color: yellow;
+    padding: 20px 20px;
+    text-shadow:  0 0 30px yellow;
+    animation: neonEffect 1.5s infinite alternate; /* Adicione uma animação alternada */
+        }
+
+        @keyframes neonEffect {
+            from {
+                text-shadow: 0 0 10px yellow;
+            }
+            to {
+                text-shadow: 0 0 30px yellow;
+            }
+        }
+    
+        
+
+
+
+
+
+
+/* ESTILO DO CABEÇALHO */
+header {
+    padding: 40px 4%;
+}
+
+header>.interface {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a {
+    color: #5c5c5c;
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+}
+
+header nav.menu-desktop a:hover {
+    color: yellow;
+    transform: scale(1.05);
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav.menu-desktop ul li {
+    display: inline-block;
+    padding: 0 40px;
+}
+
+
+
+
+
+
+
+.knowledge-box {
+  width: 200px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  text-align: center;
+  margin: 10px;
+  border-radius: 8px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.btn-abrir-menu{
+    display: none;
+}
+
+.btn-abrir-menu i{
+    color: yellow;
+    font-size: 40px;
+}
+
+.menu-mobile{
+    background-color: #000;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99999;
+    width: 0%;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.menu-mobile.abrir-menu{
+    width: 70%;
+}
+
+.menu-mobile.abrir-menu ~ .overlay-menu{
+    display: block;
+}
+
+
+.menu-mobile .btn-fechar{
+    padding: 20px 5%;
+}
+
+.menu-mobile .btn-fechar i{
+    color: yellow;
+    font-size: 30px;
+}
+
+.menu-mobile nav ul{
+    text-align: right;
+}
+
+.menu-mobile nav ul li a{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 20px 8%;
+    display: block;
+}   
+
+.menu-mobile nav ul li a:hover{
+    background-color: yellow;
+    color: #000;
+}
+
+.overlay-menu{
+    background-color: #000000df;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 88888;
+    display: none;
+}
+
+
+.especialidade {
+    width: 300px; /* Ajuste a largura conforme necessário */
+    height: auto;
+    text-align: center; /* Centralize a imagem horizontalmente */
+    box-shadow: 0 8px 16px rgb(17, 17, 17); /* Adicione a box-shadow desejada */
+    margin-top: 60px;
+    margin-left: 30px;
+    border-radius: 12px;
+    padding: 30px;
+}
+
+.especialidade img{
+    width: 210px;
+    margin-top: 20px;
+}
+
+.descricao {
+    max-width: 700px;
+    color: antiquewhite;
+    margin-top: 100px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px; /* Ajuste o tamanho da fonte conforme necessário */
+}
+
+.container {
+    display: flex;
+    gap: 70px;
+    
+}
+
+
+.descricao h3 {
+    font-size: 40px;
+    color: yellow;
+}
+
+
+.toggle-switch {
+    position: fixed;
+    right: 20px;
+    bottom: 60px;
+    width: 100px;
+    height: -10px;
+    --light: #d8dbe0;
+    --dark: #28292c;
+    --link: rgb(27, 129, 112);
+    --link-hover: rgb(24, 94, 82);
+  }
+  
+  .switch-label {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    background-color: var(--dark);
+    border-radius: 25px;
+    cursor: pointer;
+    border: 3px solid var(--dark);
+  }
+  
+  .checkbox {
+    position: absolute;
+    display: none;
+  }
+  
+  .slider {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  
+  .checkbox:checked ~ .slider {
+    background-color: var(--light);
+  }
+  
+  .slider::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    -webkit-box-shadow: inset 12px -4px 0px 0px var(--light);
+    box-shadow: inset 12px -4px 0px 0px var(--light);
+    background-color: var(--dark);
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  
+  .checkbox:checked ~ .slider::before {
+    -webkit-transform: translateX(50px);
+    -ms-transform: translateX(50px);
+    transform: translateX(50px);
+    background-color: var(--dark);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  body {
+    transition: background-color 0.5s ease, color 0.5s ease; /* Adicionei a transição para a propriedade color */
+    background-color: #000000;
+    color: white;
+  }
+  body.light-theme {
+    background-color: white;
+    color: #000;
+  }
+  
+  body.light-theme h1,
+  body.light-theme h2,
+  body.light-theme h3,
+  body.light-theme p {
+    color: #000; /* Cor do texto para cabeçalhos e parágrafos no tema claro */
+    color: #000; /* Cor do texto para cabeçalhos e parágrafos no tema claro */
+  -webkit-text-stroke-width: 1px; /* largura da borda */
+    -webkit-text-stroke-color: #000; /* cor da borda */
+  }
+
+  body.light-theme .descricao h3{
+    color: yellow;
+    
+  }
+  
